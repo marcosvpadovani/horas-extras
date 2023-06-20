@@ -19,8 +19,11 @@ const dbConn = require("./db/index");
 
 // routes
 const login = require("./routes/login");
+const auth = require("./routes/auth");
 
+app.use(auth);
 app.use(login);
+
 app.use("*", (req, res) => {
   return res.status(404).sendFile(path.join(__dirname, "./views", "404.html"));
 });

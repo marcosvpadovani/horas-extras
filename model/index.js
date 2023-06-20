@@ -152,7 +152,7 @@ const Hora = dbConn.define(
   }
 );
 
-const Fechamento = sequelize.define("Fechamento", {
+const Fechamento = dbConn.define("Fechamento", {
   id: {
     type: DataTypes.UUID,
     allowNull: false,
@@ -165,7 +165,7 @@ const Fechamento = sequelize.define("Fechamento", {
   },
 });
 
-const Suporte = sequelize.define("Chamados_Suporte", {
+const Suporte = dbConn.define("Chamados_Suporte", {
   id: {
     type: DataTypes.UUID,
     allowNull: false,
